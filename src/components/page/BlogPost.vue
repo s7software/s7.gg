@@ -21,6 +21,7 @@ export default {
         posts.find(post => {
             if (post.slug === this.$route.params.slug) {
                 this.post = post;
+                document.title = document.title.replace('View Post', post.title);
             }
         });
 
