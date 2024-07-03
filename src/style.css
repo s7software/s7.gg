@@ -28,11 +28,11 @@ body {
 }
 
 .markdown h5 {
-    @apply text-lg font-semibold mt-2;
+    @apply text-xl font-semibold mt-2;
 }
 
-.markdown p {
-    @apply my-2 text-zinc-400;
+.markdown, .markdown p {
+    @apply text-xl leading-10 my-5 text-zinc-300;
 }
 
 .markdown a {

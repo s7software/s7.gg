@@ -9,7 +9,7 @@
                 </p>
             </div>
         </header>
-        <div class="py-4 markdown" v-html="post.content"></div>
+        <div class="markdown" v-html="post.content"></div>
     </div>
 </template>
 
