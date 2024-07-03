@@ -2,7 +2,7 @@
     <nav class="py-6 px-2">
         <div class="rounded-xl bg-gray-600 bg-opacity-20 px-2 -m-2 flex items-center justify-between">
             <div class="flex">
-                <RouterLink :to="{name: 'home'}"><img src="logo.png" class="h-10 my-2"></RouterLink>
+                <RouterLink :to="{name: 'home'}"><img src="/logo.png" class="h-10 my-2"></RouterLink>
                 <div class="p-2 flex gap-2">
                     <div v-if="!isHome()" @click="goBack" to="/" class="flex items-center justify-center bg-gray-700 bg-opacity-50 hover:bg-opacity-100 cursor-pointer transition ease-in-out p-2.5 px-4 rounded-lg text-xs tracking-wide">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
