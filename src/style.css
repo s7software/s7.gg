@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: #111826;
+}
+
 .grid-bg {
     background-size: 40px 40px;
     background-image: radial-gradient(circle, #273445 1px, rgba(0, 0, 0, 0) 1px);

@@ -3,7 +3,7 @@ slug: first-post
 author: Josh Barker
 datePosted: 2024-07-03
 dateUpdated:
-hero: https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+hero:
 
 ---
 Hello, this is the first post on the blog. An example post. This website is built with Vite + Vue3 🙂
