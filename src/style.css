@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-bg {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #273445 1px, rgba(0, 0, 0, 0) 1px);
+}
+
+.markdown h1 {
+    @apply text-4xl font-semibold mt-2;
+}
+
+.markdown h2 {
+    @apply text-3xl font-semibold mt-2;
+}
+
+.markdown h3 {
+    @apply text-2xl font-semibold mt-2;
+}
+
+.markdown h4 {
+    @apply text-xl font-semibold mt-2;
+}
+
+.markdown h5 {
+    @apply text-lg font-semibold mt-2;
+}
+
+.markdown p {
+    @apply my-2 text-zinc-400;
+}
+
+.markdown a {
+    @apply text-blue-400 hover:underline;
+}
