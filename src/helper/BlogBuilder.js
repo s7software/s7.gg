@@ -13,7 +13,7 @@ export default (directoryPath, outputPath) => {
 
         const results = [];
 
-        files.forEach(file => {
+        files.reverse().forEach(file => {
             const filePath = path.join(absoluteDirectoryPath, file);
             
             if (path.extname(file) === '.md') {

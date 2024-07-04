@@ -3,32 +3,35 @@
 @tailwind utilities;
 
 body {
-    background-color: #111826;
+    --dot-colour: #424242;
+    @apply bg-gray-900 text-white;
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, var(--dot-colour) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-.grid-bg {
-    background-size: 40px 40px;
-    background-image: radial-gradient(circle, #273445 1px, rgba(0, 0, 0, 0) 1px);
+body.light {
+    @apply bg-white text-dark;
+    --dot-colour: #dddddd;
 }
 
 .markdown h1 {
-    @apply text-4xl font-semibold mt-2;
+    @apply text-4xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
 }
 
 .markdown h2 {
-    @apply text-3xl font-semibold mt-2;
+    @apply text-3xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
 }
 
 .markdown h3 {
-    @apply text-2xl font-semibold mt-2;
+    @apply text-2xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
 }
 
 .markdown h4 {
-    @apply text-xl font-semibold mt-2;
+    @apply text-xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
 }
 
 .markdown h5 {
-    @apply text-xl font-semibold mt-2;
+    @apply text-xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
 }
 
 .markdown, .markdown p {
@@ -36,5 +39,5 @@ body {
 }
 
 .markdown a {
-    @apply text-blue-400 hover:underline;
+    @apply text-primary hover:underline;
 }
