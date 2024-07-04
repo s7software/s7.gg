@@ -1,4 +1,4 @@
-title: First blog post
+title: Welcome to the S7 Blog
 slug: first-post
 author: Josh Barker
 datePosted: 2024-07-03
