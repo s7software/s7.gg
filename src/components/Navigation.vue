@@ -1,6 +1,6 @@
 <template>
     <nav class="py-6 px-2">
-        <div class="rounded-xl bg-gray-600 bg-opacity-20 px-2 -m-2 flex items-center justify-between">
+        <div class="flex items-center justify-between">
             <div class="flex">
                 <RouterLink :to="{name: 'home'}"><img src="/logo.png" class="h-10 my-2"></RouterLink>
                 <div class="p-2 flex gap-2">
@@ -9,18 +9,17 @@
                     </div>
                 </div>
             </div>
-            <div class="flex gap-2">
-                <RouterLink :to="{name: 'blog'}" class="flex items-center justify-center gap-2 bg-gray-700 bg-opacity-50 hover:bg-opacity-100 cursor-pointer transition ease-in-out p-2.5 px-4 rounded-lg text-xs tracking-wide">
+            <div class="flex gap-6">
+                <RouterLink :to="{name: 'blog'}" class="flex items-center justify-center gap-2 hover:text-primary cursor-pointer transition ease-in-out text-xs tracking-wide">
                     <Rss size="16" />
-                    Blog
                 </RouterLink>
-                <a href="https://github.com/s7software" target="_blank" class="flex items-center justify-center gap-2 bg-gray-700 bg-opacity-50 hover:bg-opacity-100 cursor-pointer transition ease-in-out p-2.5 px-4 rounded-lg text-xs tracking-wide">
+                <a href="https://github.com/s7software" target="_blank" class="flex items-center justify-center gap-2 hover:text-primary cursor-pointer transition ease-in-out text-xs tracking-wide">
                     <Github :size="16" />
                 </a>
-                <a href="https://x.com/joshbarkeruk" target="_blank" class="flex items-center justify-center gap-2 bg-gray-700 bg-opacity-50 hover:bg-opacity-100 cursor-pointer transition ease-in-out p-2.5 px-4 rounded-lg text-xs tracking-wide">
+                <a href="https://x.com/joshbarkeruk" target="_blank" class="flex items-center justify-center gap-2 hover:text-primary cursor-pointer transition ease-in-out text-xs tracking-wide">
                     <Twitter :size="16" />
                 </a>
-                <a href="mailto:contact@joshbarker.co.uk" class="flex items-center justify-center gap-2 bg-gray-700 bg-opacity-50 hover:bg-opacity-100 cursor-pointer transition ease-in-out p-2.5 px-4 rounded-lg text-xs tracking-wide">
+                <a href="mailto:josh@s7.gg" class="flex items-center justify-center gap-2 hover:text-primary cursor-pointer transition ease-in-out text-xs tracking-wide">
                     <Mail :size="16" />
                 </a>
             </div>

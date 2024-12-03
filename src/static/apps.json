@@ -1,10 +1,19 @@
 [
     {
+        "id": "budgetbear",
+        "name": "BudgetBear",
+        "icon": "/budgetbear.png",
+        "description": "BudgetBear is a free budgeting and finance tracking app designed to help you manage your money. Launching soon.",
+        "web": null,
+        "ios": null,
+        "android": null
+    },
+    {
         "id": "luna-suite",
         "name": "Luna Suite",
         "icon": "https://lunasuite.co.uk/image/icon_light.png?v=1719913868",
         "description": "The all-in-one solution for your small business. A powerful CRM paired with a bespoke website builder with built in custom forms. Turn form submissions into leads and track clients, send messages and convert visitors into paying customers.",
-        "web": "https://lunasuite.co.uk/?ref=s7gg",
+        "web": "https://lunacrm.co/?ref=s7gg",
         "ios": null,
         "android": null
     }

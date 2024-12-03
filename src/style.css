@@ -3,15 +3,11 @@
 @tailwind utilities;
 
 body {
-    --dot-colour: #424242;
-    @apply bg-gray-900 text-white;
-    background-size: 40px 40px;
-    background-image: radial-gradient(circle, var(--dot-colour) 1px, rgba(0, 0, 0, 0) 1px);
+    @apply bg-zinc-900 text-white;
 }
 
 body.light {
     @apply bg-white text-dark;
-    --dot-colour: #dddddd;
 }
 
 .markdown h1 {

@@ -4,9 +4,9 @@
         <p class="text-primary text-sm sm:text-xl">Developing innovative solutions for modern needs.</p>
     </header>
     <div class="py-4 space-y-3">
-        <h2 class="text-primary text-sm tracking-widest">Product portfolio</h2>
+        <h2 class="text-primary text-sm tracking-widest">Products</h2>
 
-        <div v-for="app in apps" class="rounded-lg bg-gray-700 p-4 bg-opacity-20 flex flex-col md:flex-row gap-4 items-start hover:bg-opacity-50 transition ease-in-out duration-500">
+        <div v-for="app in apps" class="rounded-lg bg-zinc-700 p-4 bg-opacity-20 flex flex-col md:flex-row gap-4 items-start hover:bg-opacity-50 transition ease-in-out duration-500">
             <img :src="app.icon" class="h-16 md:h-20 rounded-lg flex-shrink-0">
             <div class="space-y-2">
                 <h3 class="text-lg font-semibold">{{ app.name }}</h3>

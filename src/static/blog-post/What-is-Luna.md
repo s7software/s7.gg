@@ -57,4 +57,4 @@ Leverage the power of data to make informed business decisions. Track key metric
 
 Luna Suite is the ultimate solution for small businesses looking to enhance their operations and grow their customer base. By combining a powerful CRM with a bespoke website builder, we provide you with the tools needed to manage client relationships, build a professional online presence, and convert visitors into paying customers. Embrace the future of business management and watch your small business thrive with our innovative web app.
 
-Click [here](https://lunasuite.co.uk) to learn more about Luna Suite.
+Click [here](https://lunacrm.co) to learn more about Luna Suite.

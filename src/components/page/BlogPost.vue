@@ -10,9 +10,9 @@
             </div>
         </header>
         <div class="markdown" v-html="post.content"></div>
-        <div class="py-6 space-y-3 border-t border-gray-700">
+        <div class="py-6 space-y-3 border-t border-zinc-700">
             <h2 class="text-primary text-sm tracking-widest">Other blog posts that might interest you</h2>
-            <div class="rounded-xl bg-gray-600 bg-opacity-20 p-4">
+            <div class="rounded-xl bg-zinc-600 bg-opacity-20 p-4">
                 <BlogPostCollection :limit="4" :ignore="post.slug" />
             </div>
         </div>
