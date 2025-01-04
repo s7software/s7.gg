@@ -6,11 +6,13 @@ import Home from './components/page/Home.vue'
 import NotFound from './components/page/NotFound.vue'
 import Blog from './components/page/Blog.vue'
 import BlogPost from './components/page/BlogPost.vue'
+import BudgetBearPP from './components/page/app/budgetbear/PrivacyPolicy.vue'
 
 const routes = [
     { path: '/', component: Home, name: 'home', meta: {title: 'Home'}},
     { path: '/blog', component: Blog, name: 'blog', meta: {title: 'Blog'}},
     { path: '/blog/:slug', component: BlogPost, name: 'blog-post', meta: {title: 'View Post'}},
+    { path: '/app/budgetbear/privacy-policy', component: BudgetBearPP, name: 'app.budgetbear.privacy-policy', meta: {title: 'BudgetBear - Privacy Policy'}},
     { path: "/:catchAll(.*)*", component: NotFound, name: 'not-found'}
 ]
 const router = createRouter({
