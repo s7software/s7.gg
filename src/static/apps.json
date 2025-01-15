@@ -3,9 +3,9 @@
         "id": "budgetbear",
         "name": "BudgetBear",
         "icon": "/budgetbear.png",
-        "description": "BudgetBear is a free budgeting and finance tracking app designed to help you manage your money. Launching soon.",
+        "description": "BudgetBear is a free budgeting and finance tracking app designed to help you manage your money.",
         "web": null,
-        "ios": null,
+        "ios": "https://apps.apple.com/us/app/spending-tracker-budgetbear/id6738929063",
         "android": null
     },
     {
