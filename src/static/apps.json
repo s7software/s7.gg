@@ -6,15 +6,17 @@
         "description": "BudgetBear is a free budgeting and finance tracking app designed to help you manage your money.",
         "web": null,
         "ios": "https://apps.apple.com/us/app/spending-tracker-budgetbear/id6738929063",
-        "android": null
+        "android": null,
+        "comingSoon": false
     },
     {
-        "id": "luna-suite",
-        "name": "Luna Suite",
-        "icon": "https://lunasuite.co.uk/image/icon_light.png?v=1719913868",
-        "description": "The all-in-one solution for your small business. A powerful CRM paired with a bespoke website builder with built in custom forms. Turn form submissions into leads and track clients, send messages and convert visitors into paying customers.",
-        "web": "https://lunacrm.co/?ref=s7gg",
+        "id": "mymenu",
+        "name": "MyMenu",
+        "icon": "/mymenu.png",
+        "description": "MyMenu is a free meal planning app designed to help you organise your weekly meals and shopping with ease, saving you money and reducing on food waste.",
+        "web": null,
         "ios": null,
-        "android": null
+        "android": null,
+        "comingSoon": true
     }
 ]
