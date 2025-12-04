@@ -2,13 +2,13 @@
 export default {
     content: [
         "./index.html",
-        "./src/**/*.{js,ts,jsx,tsx,vue}",
+        "./src/**/*.{js,ts,jsx,tsx,vue,json}",
     ],
     theme: {
         extend: {
             colors: {
                 'dark': '#141414',
-                'primary': '#00a8ff'
+                'primary': '#C2420D'
             },
         },
     },

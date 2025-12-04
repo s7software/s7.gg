@@ -3,35 +3,31 @@
 @tailwind utilities;
 
 body {
-    @apply bg-zinc-900 text-white;
-}
-
-body.light {
-    @apply bg-white text-dark;
+    @apply bg-zinc-100 min-h-screen;
 }
 
 .markdown h1 {
-    @apply text-4xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
+    @apply text-4xl mt-2 border-l-4 border-primary text-black font-black p-2 px-4;
 }
 
 .markdown h2 {
-    @apply text-3xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
+    @apply text-3xl mt-2 border-l-4 border-primary text-black font-bold p-2 px-4;
 }
 
 .markdown h3 {
-    @apply text-2xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
+    @apply text-2xl mt-2 border-l-4 border-primary text-black font-bold p-2 px-4;
 }
 
 .markdown h4 {
-    @apply text-xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
+    @apply text-xl mt-2 border-l-4 border-primary text-black font-semibold p-2 px-4;
 }
 
 .markdown h5 {
-    @apply text-xl font-semibold mt-2 border-l-4 border-primary text-white p-2 px-4;
+    @apply text-xl mt-2 border-l-4 border-primary text-black font-semibold p-2 px-4;
 }
 
 .markdown, .markdown p {
-    @apply text-xl leading-10 my-5 text-zinc-300;
+    @apply text-xl leading-10 my-5 text-zinc-700;
 }
 
 .markdown a {

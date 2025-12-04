@@ -3,20 +3,190 @@
         "id": "budgetbear",
         "name": "BudgetBear",
         "icon": "/budgetbear.png",
+        "shortDesc": "Finance Tracker",
         "description": "BudgetBear is a free budgeting and finance tracking app designed to help you manage your money.",
         "web": null,
         "ios": "https://apps.apple.com/us/app/spending-tracker-budgetbear/id6738929063",
+        "mac": "https://apps.apple.com/us/app/spending-tracker-budgetbear/id6738929063",
         "android": null,
-        "comingSoon": false
+        "comingSoon": false,
+        "background": "bg-green-100",
+        "platforms": ["ios", "mac"],
+        "features": [
+            {
+                "icon": "PieChart",
+                "title": "Expense Tracking",
+                "desc": "Easily track your daily expenses and categorize them for better insights.",
+                "background": "bg-green-100"
+            },
+            {
+                "icon": "CreditCard",
+                "title": "Budget Planning",
+                "desc": "Set monthly budgets and monitor your spending to stay on track.",
+                "background": "bg-blue-100"
+            },
+            {
+                "icon": "BarChart2",
+                "title": "Financial Reports",
+                "desc": "Generate detailed reports to analyze your financial habits and make informed decisions.",
+                "background": "bg-yellow-100"
+            },
+            {
+                "icon": "Cloud",
+                "title": "iCloud Sync",
+                "desc": "Sync your data across all your Apple devices securely using iCloud.",
+                "background": "bg-purple-100"
+            }
+        ]
     },
     {
         "id": "mymenu",
         "name": "MyMenu",
         "icon": "/mymenu.png",
+        "shortDesc": "Meal Planner",
         "description": "MyMenu is a free meal planning app designed to help you organise your weekly meals and shopping with ease, saving you money and reducing on food waste.",
         "web": null,
         "ios": null,
+        "mac": null,
         "android": null,
-        "comingSoon": true
+        "comingSoon": true,
+        "background": "bg-yellow-100",
+        "platforms": ["ios", "mac"],
+        "features": [
+            {
+                "icon": "Calendar",
+                "title": "Weekly Meal Planning",
+                "desc": "Plan your meals for the week ahead with our easy-to-use calendar interface.",
+                "background": "bg-yellow-100"
+            },
+            {
+                "icon": "ShoppingCart",
+                "title": "Automated Shopping Lists",
+                "desc": "Generate shopping lists based on your meal plans to make grocery shopping a breeze.",
+                "background": "bg-green-100"
+            },
+            {
+                "icon": "RefreshCcw",
+                "title": "Meal Suggestions",
+                "desc": "Get meal suggestions based on your dietary preferences and past meals.",
+                "background": "bg-blue-100"
+            },
+            {
+                "icon": "Star",
+                "title": "Favourite Meals",
+                "desc": "Save your favourite meals for quick access and easy planning in the future.",
+                "background": "bg-purple-100"
+            }
+        ]
+    },
+    {
+        "id": "todayos",
+        "name": "TodayOS",
+        "icon": "/todayos.png",
+        "shortDesc": "Productivity App",
+        "description": "The all-in-one productivity suite that adapts to your workflow. Schedule, track, organize, and achieve more.",
+        "web": "https://todayos.co/",
+        "ios": null,
+        "mac": null,
+        "android": null,
+        "comingSoon": true,
+        "background": "bg-blue-100",
+        "platforms": ["mac", "web"],
+        "features": [
+            {
+                "icon": "calendar-days",
+                "title": "Smart Scheduling",
+                "desc": "Intuitive drag-and-drop calendar with time blocking to help you organize your day effectively.",
+                "background": "bg-blue-100"
+            },
+            {
+                "icon": "NotebookPen",
+                "title": "Reflective Journal",
+                "desc": "Daily journaling with guided prompts and mood tracking to help you grow and stay mindful.",
+                "background": "bg-purple-100"
+            },
+            {
+                "icon": "check-check",
+                "title": "Habit Tracking",
+                "desc": "Build lasting habits with visual progress tracking and intelligent reminders that adapt to your lifestyle.",
+                "background": "bg-green-100"
+            },
+            {
+                "icon": "ListTodo",
+                "title": "Task Management",
+                "desc": "Organize your to-dos with priority levels, deadlines, and reminders on a per-project basis to keep you on track.",
+                "background": "bg-orange-100"
+            },
+            {
+                "icon": "Kanban",
+                "title": "Visual Kanban",
+                "desc": "Drag and drop tasks across customizable boards to visualize your workflow and boost productivity.",
+                "background": "bg-teal-100"
+            },
+            {
+                "icon": "FileText",
+                "title": "Notes",
+                "desc": "Rich text editing with linking, tagging, and search. Your thoughts, organized and accessible.",
+                "background": "bg-yellow-100"
+            },
+            {
+                "icon": "Hash",
+                "title": "Spaces",
+                "desc": "Create dedicated workspaces to organize related projects, tasks, notes, and schedules in one place.",
+                "background": "bg-pink-100"
+            }
+        ]
+    },
+    {
+        "id": "whirlwind",
+        "name": "Whirlwind",
+        "icon": "https://i.ibb.co/0jpGVhkk/New-Project-8.png",
+        "shortDesc": "TailwindCSS Prototyping",
+        "description": "Tailwind Play as a native desktop app, with offline support, project management, local saving, and more.",
+        "web": "",
+        "ios": null,
+        "mac": null,
+        "android": null,
+        "comingSoon": true,
+        "background": "bg-red-100",
+        "platforms": ["mac"],
+        "features": [
+            {
+                "icon": "cpu",
+                "title": "Offline Support",
+                "desc": "Work on your TailwindCSS projects without an internet connection.",
+                "background": "bg-red-100"
+            },
+            {
+                "icon": "folder-open",
+                "title": "Project Management",
+                "desc": "Easily manage multiple TailwindCSS projects within the app.",
+                "background": "bg-yellow-100"
+            },
+            {
+                "icon": "save",
+                "title": "Local Saving",
+                "desc": "Save your projects locally on your device for quick access and security.",
+                "background": "bg-green-100"
+            },
+            {
+                "icon": "palette",
+                "title": "Color Picker",
+                "desc": "Quickly select tailwind colors from a built-in color picker tool.",
+                "background": "bg-blue-100"
+            },
+            {
+                "icon": "PaintBucket",
+                "title": "Gradient Generator",
+                "desc": "Generate and customize gradients for your TailwindCSS projects with ease.",
+                "background": "bg-purple-100"
+            },
+            {
+                "icon": "Code",
+                "title": "Monaco editor",
+                "desc": "VS Code editor with syntax highlighting, autocompletion, and error checking for a seamless coding experience.",
+                "background": "bg-pink-100"
+            }
+        ]
     }
 ]

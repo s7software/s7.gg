@@ -1,12 +1,8 @@
 <template>
-    <div class="min-h-screen">
-        <div class="max-w-3xl mx-auto px-2">
-            <Navigation />
-            <div class="px-2">
-                <RouterView :key="$route.fullPath" />
-                <div class="py-4 text-xs text-zinc-500">&copy; S7.GG {{ new Date().getFullYear() }}</div>
-            </div>
-        </div>
+    <div class="max-w-4xl mx-auto p-6 space-y-6">
+        <Navigation />
+        <RouterView :key="$route.fullPath" />
+        <div class="py-4 text-xs text-zinc-500">&copy; S7.GG {{ new Date().getFullYear() }}</div>
     </div>
 </template>
 
