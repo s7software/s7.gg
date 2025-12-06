@@ -11,7 +11,7 @@
         "android": null,
         "comingSoon": false,
         "background": "bg-green-100",
-        "platforms": ["ios", "mac"],
+        "platforms": ["ios"],
         "screenshots": [],
         "features": [
             {
@@ -52,7 +52,7 @@
         "android": null,
         "comingSoon": true,
         "background": "bg-yellow-100",
-        "platforms": ["ios", "mac"],
+        "platforms": ["ios"],
         "screenshots": [],
         "features": [
             {
@@ -88,12 +88,12 @@
         "shortDesc": "Pomodoro Timer",
         "description": "Pulse is a Pomodoro timer app designed to help you boost your productivity and manage your time effectively using the Pomodoro Technique.",
         "web": null,
-        "ios": "",
-        "mac": "https://apps.apple.com/us/app/pulse-pomodoro-timer/id6443122071",
+        "ios": null,
+        "mac": null,
         "android": null,
         "comingSoon": true,
         "background": "bg-red-100",
-        "platforms": ["ios", "mac"],
+        "platforms": ["mac"],
         "screenshots": [
             "/pulse/1.png",
             "/pulse/2.png",
