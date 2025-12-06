@@ -7,7 +7,11 @@
     </header>
 
     <div class="grid md:grid-cols-2 gap-6">
-        <RouterLink :to="{name: 'product', params: {id: app.id}}" v-for="app in apps" :key="app.name" class="bg-white min-h-52 border-2 border-black border-b-4 rounded-lg flex flex-col justify-between p-6 hover:-translate-y-1 transition duration-300">
+        <RouterLink 
+            :to="{name: 'product', params: {id: app.id}}" v-for="(app, i) in apps" :key="app.name" 
+            class="bg-white min-h-52 border-2 border-black border-b-4 rounded-lg flex flex-col justify-between p-6 hover:-translate-y-1 transition duration-300"
+            :class="{'md:col-span-2': i == apps.length - 1 && i % 2 == 0}"
+        >
             <div class="flex items-start justify-between">
                 <img :src="app.icon" class="size-14 border-2 border-black border-b-4 rounded-lg">
                 <div class="flex items-center gap-1">

@@ -12,6 +12,7 @@
         "comingSoon": false,
         "background": "bg-green-100",
         "platforms": ["ios", "mac"],
+        "screenshots": [],
         "features": [
             {
                 "icon": "PieChart",
@@ -52,6 +53,7 @@
         "comingSoon": true,
         "background": "bg-yellow-100",
         "platforms": ["ios", "mac"],
+        "screenshots": [],
         "features": [
             {
                 "icon": "Calendar",
@@ -80,6 +82,64 @@
         ]
     },
     {
+        "id": "pulse",
+        "name": "Pulse",
+        "icon": "/pulse.png",
+        "shortDesc": "Pomodoro Timer",
+        "description": "Pulse is a Pomodoro timer app designed to help you boost your productivity and manage your time effectively using the Pomodoro Technique.",
+        "web": null,
+        "ios": "",
+        "mac": "https://apps.apple.com/us/app/pulse-pomodoro-timer/id6443122071",
+        "android": null,
+        "comingSoon": true,
+        "background": "bg-red-100",
+        "platforms": ["ios", "mac"],
+        "screenshots": [
+            "/pulse/1.png",
+            "/pulse/2.png",
+            "/pulse/3.png",
+            "/pulse/4.png"
+        ],
+        "features": [
+            {
+                "icon": "Clock",
+                "title": "Customizable Timers",
+                "desc": "Set work and break intervals according to your preferences to optimize your productivity.",
+                "background": "bg-red-100"
+            },
+            {
+                "icon": "Activity",
+                "title": "Task Management",
+                "desc": "Create and manage tasks to stay organized and focused during your work sessions.",
+                "background": "bg-blue-100"
+            },
+            {
+                "icon": "BarChart",
+                "title": "Productivity Reports",
+                "desc": "Track your productivity over time with detailed reports and insights.",
+                "background": "bg-green-100"
+            },
+            {
+                "icon": "Brain",
+                "title": "Focus Mode",
+                "desc": "Minimize distractions with a customizable focus mode that shows just the timer, focused tasks, and a still or animated background.",
+                "background": "bg-orange-100"
+            },
+            {
+                "icon": "Bell",
+                "title": "Notifications",
+                "desc": "Get notified when your work and break intervals end, so you can stay on track without constantly checking the timer.",
+                "background": "bg-purple-100"
+            },
+            {
+                "icon": "Monitor",
+                "title": "Menu Bar Timer",
+                "desc": "Quickly access and control your Pomodoro timer directly from the menu bar for convenience.",
+                "background": "bg-yellow-100"
+            }
+        ]
+    },
+    {
         "id": "todayos",
         "name": "TodayOS",
         "icon": "/todayos.png",
@@ -92,6 +152,7 @@
         "comingSoon": true,
         "background": "bg-blue-100",
         "platforms": ["mac", "web"],
+        "screenshots": [],
         "features": [
             {
                 "icon": "calendar-days",
@@ -134,6 +195,12 @@
                 "title": "Spaces",
                 "desc": "Create dedicated workspaces to organize related projects, tasks, notes, and schedules in one place.",
                 "background": "bg-pink-100"
+            },
+            {
+                "icon": "Brain",
+                "title": "Focus Mode",
+                "desc": "Minimize distractions with a customizable focus mode that shows just the timer, focused tasks, and a still or animated background.",
+                "background": "bg-red-100"
             }
         ]
     },
@@ -150,6 +217,7 @@
         "comingSoon": true,
         "background": "bg-red-100",
         "platforms": ["mac"],
+        "screenshots": [],
         "features": [
             {
                 "icon": "cpu",

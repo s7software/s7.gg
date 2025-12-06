@@ -44,8 +44,27 @@
                 </Button>
             </div>
         </div>
+        <div v-if="app.screenshots && app.screenshots.length" class="bg-white border-2 border-black border-b-4 rounded-lg">
+            <div class="font-black text-2xl lowercase mb-4 p-6">Screenshots</div>
+            <div class="overflow-x-auto pb-4">
+                <div class="flex gap-4 w-max px-6 pb-6">
+                    <div 
+                        v-for="(screenshot, index) in app.screenshots" 
+                        :key="index"
+                        @click="openLightbox(index)"
+                        class="cursor-pointer hover:opacity-80 transition-opacity duration-300"
+                    >
+                        <img 
+                            :src="screenshot" 
+                            :alt="`${app.name} screenshot ${index + 1}`"
+                            class="h-96 w-auto rounded-lg object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
         <div v-if="app.features.length" class="grid md:grid-cols-2 gap-6">
-            <div v-for="(feature, i) in app.features" :key="feature.title" :class="{'col-span-2': i == app.features.length - 1 && i % 2 == 0}" class="bg-white border-2 border-black border-b-4 rounded-lg p-6 flex flex-col items-start gap-4">
+            <div v-for="(feature, i) in app.features" :key="feature.title" :class="{'md:col-span-2': i == app.features.length - 1 && i % 2 == 0}" class="bg-white border-2 border-black border-b-4 rounded-lg p-6 flex flex-col items-start gap-4">
                 <div :class="feature.background ? feature.background : 'bg-gray-100'" class="p-3 rounded-lg border-2 border-black border-b-4">
                     <component v-if="getIconComponent(feature.icon)" :is="getIconComponent(feature.icon)" class="size-8 text-black" />
                 </div>
@@ -59,6 +78,45 @@
             <div class="font-black text-2xl lowercase">Coming Soon</div>
             <div class="text-sm font-semibold lowercase">We're working hard to finish {{ app.name }}. Check back again later!</div>
         </div>
+
+        <!-- Lightbox -->
+        <Teleport to="body">
+            <div 
+                v-if="lightboxOpen" 
+                @click="closeLightbox"
+                class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+            >
+                <button 
+                    @click="closeLightbox"
+                    class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+                >
+                    <component v-if="getIconComponent('x')" :is="getIconComponent('x')" class="size-8" />
+                </button>
+                <button 
+                    v-if="currentScreenshotIndex > 0"
+                    @click.stop="previousScreenshot"
+                    class="absolute left-4 text-white hover:text-gray-300 transition-colors"
+                >
+                    <component v-if="getIconComponent('chevron-left')" :is="getIconComponent('chevron-left')" class="size-12" />
+                </button>
+                <button 
+                    v-if="currentScreenshotIndex < app.screenshots.length - 1"
+                    @click.stop="nextScreenshot"
+                    class="absolute right-4 text-white hover:text-gray-300 transition-colors"
+                >
+                    <component v-if="getIconComponent('chevron-right')" :is="getIconComponent('chevron-right')" class="size-12" />
+                </button>
+                <img 
+                    :src="app.screenshots[currentScreenshotIndex]" 
+                    :alt="`${app.name} screenshot ${currentScreenshotIndex + 1}`"
+                    class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+                    @click.stop
+                />
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm font-bold">
+                    {{ currentScreenshotIndex + 1 }} / {{ app.screenshots.length }}
+                </div>
+            </div>
+        </Teleport>
     </div>
 </template>
 
@@ -75,13 +133,40 @@ export default {
     data() {
         return {
             app: null,
-            icons: []
+            icons: [],
+            lightboxOpen: false,
+            currentScreenshotIndex: 0
         }
     },
     methods: {
         getIconComponent(iconName) {
             const icon = this.icons.find(i => i.name === iconName);
             return icon ? icon.component : null;
+        },
+        openLightbox(index) {
+            this.currentScreenshotIndex = index;
+            this.lightboxOpen = true;
+            document.body.style.overflow = 'hidden';
+        },
+        closeLightbox() {
+            this.lightboxOpen = false;
+            document.body.style.overflow = '';
+        },
+        nextScreenshot() {
+            if (this.currentScreenshotIndex < this.app.screenshots.length - 1) {
+                this.currentScreenshotIndex++;
+            }
+        },
+        previousScreenshot() {
+            if (this.currentScreenshotIndex > 0) {
+                this.currentScreenshotIndex--;
+            }
+        },
+        handleKeydown(e) {
+            if (!this.lightboxOpen) return;
+            if (e.key === 'Escape') this.closeLightbox();
+            if (e.key === 'ArrowLeft') this.previousScreenshot();
+            if (e.key === 'ArrowRight') this.nextScreenshot();
         },
         async loadIcon(iconName) {
             // Convert kebab-case to PascalCase (e.g., 'calendar-days' -> 'CalendarDays')
@@ -106,16 +191,20 @@ export default {
         
         document.title = `${this.app ? this.app.name : 'App Not Found'} - S7`;
 
-        // Load platform icons
-        const platformIcons = ['smartphone', 'laptop', 'globe'];
-        await Promise.all(platformIcons.map(icon => this.loadIcon(icon)));
+        await Promise.all(['smartphone', 'laptop', 'globe'].map(icon => this.loadIcon(icon)));
+        await Promise.all(['x', 'chevron-left', 'chevron-right'].map(icon => this.loadIcon(icon)));
 
-        // Load feature icons
         if (this.app && this.app.features) {
             await Promise.all(
                 this.app.features.map(feature => this.loadIcon(feature.icon))
             );
         }
+
+        window.addEventListener('keydown', this.handleKeydown);
+    },
+    beforeUnmount() {
+        window.removeEventListener('keydown', this.handleKeydown);
+        document.body.style.overflow = '';
     }
 }
 </script>
