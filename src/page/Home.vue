@@ -51,7 +51,7 @@ export default {
     },
     data() {
         return {
-            apps: APPS
+            apps: APPS.filter(app => app.enabled)
         }
     }
 }

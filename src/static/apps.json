@@ -2,6 +2,7 @@
     {
         "id": "budgetbear",
         "name": "BudgetBear",
+        "enabled": true,
         "icon": "/budgetbear.png",
         "shortDesc": "Finance Tracker",
         "description": "BudgetBear is a free budgeting and finance tracking app designed to help you manage your money.",
@@ -43,6 +44,7 @@
     {
         "id": "mymenu",
         "name": "MyMenu",
+        "enabled": true,
         "icon": "/mymenu.png",
         "shortDesc": "Meal Planner",
         "description": "MyMenu is a free meal planning app designed to help you organise your weekly meals and shopping with ease, saving you money and reducing on food waste.",
@@ -84,6 +86,7 @@
     {
         "id": "pulse",
         "name": "Pulse",
+        "enabled": true,
         "icon": "/pulse.png",
         "shortDesc": "Pomodoro Timer",
         "description": "Pulse is a Pomodoro timer app designed to help you boost your productivity and manage your time effectively using the Pomodoro Technique.",
@@ -143,6 +146,7 @@
     {
         "id": "todayos",
         "name": "TodayOS",
+        "enabled": true,
         "icon": "/todayos.png",
         "shortDesc": "Productivity App",
         "description": "The all-in-one productivity suite that adapts to your workflow. Schedule, track, organize, and achieve more.",
@@ -208,6 +212,7 @@
     {
         "id": "whirlwind",
         "name": "Whirlwind",
+        "enabled": false,
         "icon": "https://i.ibb.co/0jpGVhkk/New-Project-8.png",
         "shortDesc": "TailwindCSS Prototyping",
         "description": "Tailwind Play as a native desktop app, with offline support, project management, local saving, and more.",
