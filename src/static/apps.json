@@ -92,9 +92,9 @@
         "description": "Pulse is a Pomodoro timer app designed to help you boost your productivity and manage your time effectively using the Pomodoro Technique.",
         "web": null,
         "ios": null,
-        "mac": null,
+        "mac": "https://github.com/s7software/pulse/releases/latest/download/pulse_1.0.0_aarch64.dmg",
         "android": null,
-        "comingSoon": true,
+        "comingSoon": false,
         "background": "bg-red-100",
         "platforms": ["mac"],
         "screenshots": [
