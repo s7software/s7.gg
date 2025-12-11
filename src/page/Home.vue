@@ -2,7 +2,7 @@
     <header class="bg-white border-2 border-black border-b-4 rounded-lg h-60 flex flex-col justify-end p-6">
         <h1 class="flex flex-col">
             <span class="font-bold lowercase text-2xl">we're building</span>
-            <span class="font-black text-7xl lowercase -mt-4 ">powerful apps.</span>
+            <span class="font-black text-5xl lg:text-7xl lowercase -mt-2 lg:-mt-4 ">powerful apps.</span>
         </h1>
     </header>
 

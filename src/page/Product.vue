@@ -1,7 +1,7 @@
 <template>
     <NotFound v-if="!app" />
     <div v-else class="space-y-6">
-        <header class="bg-white border-2 border-black border-b-4 rounded-lg flex flex-col justify-between p-6 min-h-72">
+        <header class="bg-white border-2 border-black border-b-4 rounded-lg flex flex-col justify-between p-6 min-h-72 space-y-6">
             <div class="flex items-start justify-between">
                 <img :src="app.icon" class="size-28 border-2 border-black border-b-4 rounded-lg bg-white">
                 <div class="flex items-center gap-1">
@@ -13,37 +13,16 @@
                 <span class="font-black lowercase text-3xl md:text-5xl">{{ app.name }}</span>
                 <span class="font-semibold text-sm lowercase mt-2">{{ app.description }}</span>
             </h1>
+            <div v-if="app.ios || app.android || app.web || app.mac" class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2">
+                <Button v-if="app.ios" :href="app.ios" class="w-full sm:w-auto text-center">Download for iOS</Button>
+                <Button v-if="app.android" :href="app.android" class="w-full sm:w-auto text-center">Download for Android</Button>
+                <Button v-if="app.web" :href="app.web" class="w-full sm:w-auto text-center">Open Web App</Button>
+                <Button v-if="app.mac && !app.mac.m && !app.mac.intel" :href="app.mac" class="w-full sm:w-auto text-center">Download for Mac</Button>
+                <Button v-if="app.mac && app.mac.m" :href="app.mac.m" class="w-full sm:w-auto text-center whitespace-nowrap">Mac (Apple Silicon)</Button>
+                <Button v-if="app.mac && app.mac.intel" :href="app.mac.intel" class="w-full sm:w-auto text-center whitespace-nowrap">Mac (Intel)</Button>
+                <Button variant="success" v-if="app.license" :href="app.license" class="w-full sm:w-auto text-center">Buy License <span v-if="app.price">({{ app.price }})</span></Button>
+            </div>
         </header>
-        <div v-if="app.ios || app.mac || app.web || app.android" class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="flex flex-col items-center gap-3 p-4 rounded-lg border-2 border-black border-b-4" :class="app.ios ? 'bg-white' : 'bg-zinc-200'">
-                <component v-if="getIconComponent('smartphone')" :is="getIconComponent('smartphone')" class="size-8" />
-                <div class="font-black text-lg lowercase text-center">iOS</div>
-                <Button :href="app.ios" :disabled="!app.ios">
-                    {{ app.ios ? 'Download' : 'Not Available' }}
-                </Button>
-            </div>
-            <div class="flex flex-col items-center gap-3 p-4 rounded-lg border-2 border-black border-b-4" :class="app.mac ? 'bg-white' : 'bg-zinc-200'">
-                <component v-if="getIconComponent('laptop')" :is="getIconComponent('laptop')" class="size-8" />
-                <div class="font-black text-lg lowercase text-center">MacOS</div>
-                <Button :href="app.mac" :disabled="!app.mac">
-                    {{ app.mac ? 'Download' : 'Not Available' }}
-                </Button>
-            </div>
-            <div class="flex flex-col items-center gap-3 p-4 rounded-lg border-2 border-black border-b-4" :class="app.web ? 'bg-white' : 'bg-zinc-200'">
-                <component v-if="getIconComponent('globe')" :is="getIconComponent('globe')" class="size-8" />
-                <div class="font-black text-lg lowercase text-center">Web</div>
-                <Button :href="app.web" :disabled="!app.web">
-                    {{ app.web ? 'Open' : 'Not Available' }}
-                </Button>
-            </div>
-            <div class="flex flex-col items-center gap-3 p-4 rounded-lg border-2 border-black border-b-4" :class="app.android ? 'bg-white' : 'bg-zinc-200'">
-                <component v-if="getIconComponent('smartphone')" :is="getIconComponent('smartphone')" class="size-8" />
-                <div class="font-black text-lg lowercase text-center">Android</div>
-                <Button :href="app.android" :disabled="!app.android">
-                    {{ app.android ? 'Download' : 'Not Available' }}
-                </Button>
-            </div>
-        </div>
         <div v-if="app.screenshots && app.screenshots.length" class="bg-white border-2 border-black border-b-4 rounded-lg">
             <div class="font-black text-2xl lowercase mb-4 p-6">Screenshots</div>
             <div class="overflow-x-auto pb-4">
