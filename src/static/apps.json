@@ -93,8 +93,8 @@
         "web": null,
         "ios": null,
         "mac": {
-            "m": "https://github.com/s7software/pulse/releases/latest/download/pulse_1.1.3_aarch64.dmg",
-            "intel": "https://github.com/s7software/pulse/releases/latest/download/pulse_1.1.3_x64.dmg"
+            "m": "https://github.com/s7software/pulse/releases/latest/download/pulse_aarch64.dmg",
+            "intel": "https://github.com/s7software/pulse/releases/latest/download/pulse_x64.dmg"
         },
         "license": "https://s7gg.gumroad.com/l/pulse",
         "price": "$7.99",
