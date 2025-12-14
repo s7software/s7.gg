@@ -99,91 +99,161 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
+import { useHead } from '@unhead/vue'
+import { useRoute } from 'vue-router'
 import APPS from '@/static/apps.json';
 import NotFound from './NotFound.vue';
 import Button from '@/components/Button.vue';
 
-export default {
-    components: {
-        NotFound,
-        Button
-    },
-    data() {
-        return {
-            app: null,
-            icons: [],
-            lightboxOpen: false,
-            currentScreenshotIndex: 0
-        }
-    },
-    methods: {
-        getIconComponent(iconName) {
-            const icon = this.icons.find(i => i.name === iconName);
-            return icon ? icon.component : null;
-        },
-        openLightbox(index) {
-            this.currentScreenshotIndex = index;
-            this.lightboxOpen = true;
-            document.body.style.overflow = 'hidden';
-        },
-        closeLightbox() {
-            this.lightboxOpen = false;
-            document.body.style.overflow = '';
-        },
-        nextScreenshot() {
-            if (this.currentScreenshotIndex < this.app.screenshots.length - 1) {
-                this.currentScreenshotIndex++;
-            }
-        },
-        previousScreenshot() {
-            if (this.currentScreenshotIndex > 0) {
-                this.currentScreenshotIndex--;
-            }
-        },
-        handleKeydown(e) {
-            if (!this.lightboxOpen) return;
-            if (e.key === 'Escape') this.closeLightbox();
-            if (e.key === 'ArrowLeft') this.previousScreenshot();
-            if (e.key === 'ArrowRight') this.nextScreenshot();
-        },
-        async loadIcon(iconName) {
-            // Convert kebab-case to PascalCase (e.g., 'calendar-days' -> 'CalendarDays')
-            const pascalCase = iconName
-                .split('-')
-                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                .join('');
-            
-            try {
-                const module = await import('lucide-vue-next');
-                if (module[pascalCase]) {
-                    this.icons.push({ name: iconName, component: module[pascalCase] });
-                }
-            } catch (error) {
-                console.error(`Failed to load icon: ${iconName}`, error);
-            }
-        }
-    },
-    async mounted() {
-        const appId = this.$route.params.id;
-        this.app = APPS.find(a => a.id === appId);
-        
-        document.title = `${this.app ? this.app.name : 'App Not Found'} - S7`;
+const route = useRoute()
+const app = ref(null)
+const icons = ref([])
+const lightboxOpen = ref(false)
+const currentScreenshotIndex = ref(0)
 
-        await Promise.all(['smartphone', 'laptop', 'globe'].map(icon => this.loadIcon(icon)));
-        await Promise.all(['x', 'chevron-left', 'chevron-right'].map(icon => this.loadIcon(icon)));
+const getIconComponent = (iconName) => {
+    const icon = icons.value.find(i => i.name === iconName);
+    return icon ? icon.component : null;
+}
 
-        if (this.app && this.app.features) {
-            await Promise.all(
-                this.app.features.map(feature => this.loadIcon(feature.icon))
-            );
-        }
+const openLightbox = (index) => {
+    currentScreenshotIndex.value = index;
+    lightboxOpen.value = true;
+    document.body.style.overflow = 'hidden';
+}
 
-        window.addEventListener('keydown', this.handleKeydown);
-    },
-    beforeUnmount() {
-        window.removeEventListener('keydown', this.handleKeydown);
-        document.body.style.overflow = '';
+const closeLightbox = () => {
+    lightboxOpen.value = false;
+    document.body.style.overflow = '';
+}
+
+const nextScreenshot = () => {
+    if (currentScreenshotIndex.value < app.value.screenshots.length - 1) {
+        currentScreenshotIndex.value++;
     }
 }
+
+const previousScreenshot = () => {
+    if (currentScreenshotIndex.value > 0) {
+        currentScreenshotIndex.value--;
+    }
+}
+
+const handleKeydown = (e) => {
+    if (!lightboxOpen.value) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') previousScreenshot();
+    if (e.key === 'ArrowRight') nextScreenshot();
+}
+
+const loadIcon = async (iconName) => {
+    const pascalCase = iconName
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join('');
+    
+    try {
+        const module = await import('lucide-vue-next');
+        if (module[pascalCase]) {
+            icons.value.push({ name: iconName, component: module[pascalCase] });
+        }
+    } catch (error) {
+        console.error(`Failed to load icon: ${iconName}`, error);
+    }
+}
+
+const pageTitle = computed(() => app.value ? `${app.value.name} - S7` : 'App - S7')
+const pageDescription = computed(() => app.value ? app.value.description : 'Discover our powerful apps at S7')
+const pageUrl = computed(() => `https://s7.gg/app/${route.params.id}`)
+const appKeywords = computed(() => {
+    if (!app.value) return 'S7, apps';
+    const platforms = app.value.platforms?.join(', ') || '';
+    return `${app.value.name}, S7, ${platforms}, ${app.value.shortDesc}`;
+})
+
+useHead(() => ({
+    title: pageTitle.value,
+    meta: [
+        {
+            name: 'description',
+            content: pageDescription.value
+        },
+        {
+            name: 'keywords',
+            content: appKeywords.value
+        },
+        {
+            property: 'og:title',
+            content: pageTitle.value
+        },
+        {
+            property: 'og:description',
+            content: pageDescription.value
+        },
+        {
+            property: 'og:type',
+            content: 'website'
+        },
+        {
+            property: 'og:url',
+            content: pageUrl.value
+        },
+        {
+            property: 'og:image',
+            content: app.value?.icon ? `https://s7.gg${app.value.icon}` : 'https://s7.gg/logo.png'
+        },
+        {
+            name: 'twitter:card',
+            content: 'summary_large_image'
+        },
+        {
+            name: 'twitter:title',
+            content: pageTitle.value
+        },
+        {
+            name: 'twitter:description',
+            content: pageDescription.value
+        },
+        {
+            name: 'twitter:image',
+            content: app.value?.icon ? `https://s7.gg${app.value.icon}` : 'https://s7.gg/logo.png'
+        },
+        ...(app.value?.price ? [{
+            property: 'product:price:amount',
+            content: app.value.price.replace('$', '')
+        }, {
+            property: 'product:price:currency',
+            content: 'USD'
+        }] : [])
+    ],
+    link: [
+        {
+            rel: 'canonical',
+            href: pageUrl.value
+        }
+    ]
+}))
+
+onMounted(async () => {
+    const appId = route.params.id;
+    app.value = APPS.find(a => a.id === appId);
+
+    await Promise.all(['smartphone', 'laptop', 'globe'].map(icon => loadIcon(icon)));
+    await Promise.all(['x', 'chevron-left', 'chevron-right'].map(icon => loadIcon(icon)));
+
+    if (app.value && app.value.features) {
+        await Promise.all(
+            app.value.features.map(feature => loadIcon(feature.icon))
+        );
+    }
+
+    window.addEventListener('keydown', handleKeydown);
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('keydown', handleKeydown);
+    document.body.style.overflow = '';
+})
 </script>

@@ -1,7 +1,6 @@
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
 import './style.css'
 import App from './App.vue'
-import { createWebHistory, createRouter } from 'vue-router'
 import Home from './page/Home.vue'
 import NotFound from './page/NotFound.vue'
 import Blog from './page/Blog.vue'
@@ -17,19 +16,15 @@ const routes = [
     { path: '/app/budgetbear/privacy-policy', component: BudgetBearPP, name: 'app.budgetbear.privacy-policy', meta: {title: 'BudgetBear - Privacy Policy'}},
     { path: "/:catchAll(.*)*", component: NotFound, name: 'not-found'}
 ]
-const router = createRouter({
-    history: createWebHistory(),
-    routes,
-});
-router.beforeEach((to) => {
-    const { title } = to.meta;
-    const defaultTitle = 'S7';
-  
-    document.title = `${title} - S7` || defaultTitle
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-createApp(App)
-    .use(router)
-    .mount('#app')
+export const createApp = ViteSSG(
+    App,
+    { routes },
+    ({ app, router, head, isClient }) => {
+        router.beforeEach((to) => {
+            if (isClient) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    }
+)

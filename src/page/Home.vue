@@ -39,20 +39,59 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import { useHead } from '@unhead/vue'
 import APPS from '@/static/apps.json';
 import { Globe } from 'lucide-vue-next';
 import BlogPostCollection from '@/components/BlogPostCollection.vue';
 
-export default {
-    components: {
-        Globe,
-        BlogPostCollection
-    },
-    data() {
-        return {
-            apps: APPS.filter(app => app.enabled)
+const apps = APPS.filter(app => app.enabled)
+
+useHead({
+    title: 'S7 - Building Powerful Apps',
+    meta: [
+        {
+            name: 'description',
+            content: 'S7 creates powerful, user-friendly applications including BudgetBear (finance tracker), MyMenu (meal planner), and Pulse (Pomodoro timer). Discover our suite of productivity and lifestyle apps.'
+        },
+        {
+            name: 'keywords',
+            content: 'S7, apps, BudgetBear, MyMenu, Pulse, finance tracker, meal planner, Pomodoro timer, productivity apps, iOS apps, Mac apps'
+        },
+        {
+            property: 'og:title',
+            content: 'S7 - Building Powerful Apps'
+        },
+        {
+            property: 'og:description',
+            content: 'S7 creates powerful, user-friendly applications including BudgetBear (finance tracker), MyMenu (meal planner), and Pulse (Pomodoro timer).'
+        },
+        {
+            property: 'og:type',
+            content: 'website'
+        },
+        {
+            property: 'og:url',
+            content: 'https://s7.gg/'
+        },
+        {
+            name: 'twitter:card',
+            content: 'summary_large_image'
+        },
+        {
+            name: 'twitter:title',
+            content: 'S7 - Building Powerful Apps'
+        },
+        {
+            name: 'twitter:description',
+            content: 'S7 creates powerful, user-friendly applications including BudgetBear (finance tracker), MyMenu (meal planner), and Pulse (Pomodoro timer).'
         }
-    }
-}
+    ],
+    link: [
+        {
+            rel: 'canonical',
+            href: 'https://s7.gg/'
+        }
+    ]
+})
 </script>

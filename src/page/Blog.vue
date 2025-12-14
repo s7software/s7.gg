@@ -8,12 +8,55 @@
     <BlogPostCollection class="mt-6" />
 </template>
 
-<script>
+<script setup>
+import { useHead } from '@unhead/vue'
 import BlogPostCollection from '@/components/BlogPostCollection.vue';
 
-export default {
-    components: {
-        BlogPostCollection
-    }
-}
+useHead({
+    title: 'Blog - S7',
+    meta: [
+        {
+            name: 'description',
+            content: 'Read the latest posts about new products, product updates and what\'s next from S7. Stay updated with our app development journey and feature announcements.'
+        },
+        {
+            name: 'keywords',
+            content: 'S7 blog, app updates, product announcements, BudgetBear updates, MyMenu news, Pulse updates, app development'
+        },
+        {
+            property: 'og:title',
+            content: 'Blog - S7'
+        },
+        {
+            property: 'og:description',
+            content: 'Read the latest posts about new products, product updates and what\'s next from S7.'
+        },
+        {
+            property: 'og:type',
+            content: 'website'
+        },
+        {
+            property: 'og:url',
+            content: 'https://s7.gg/blog'
+        },
+        {
+            name: 'twitter:card',
+            content: 'summary'
+        },
+        {
+            name: 'twitter:title',
+            content: 'Blog - S7'
+        },
+        {
+            name: 'twitter:description',
+            content: 'Read the latest posts about new products, product updates and what\'s next from S7.'
+        }
+    ],
+    link: [
+        {
+            rel: 'canonical',
+            href: 'https://s7.gg/blog'
+        }
+    ]
+})
 </script>

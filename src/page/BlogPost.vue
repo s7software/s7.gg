@@ -26,33 +26,102 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted, computed } from 'vue'
+import { useHead } from '@unhead/vue'
+import { useRoute, useRouter } from 'vue-router'
 import posts from '@/static/blog.json';
 import BlogPostCollection from '@/components/BlogPostCollection.vue';
 import { Calendar, User } from 'lucide-vue-next';
 
-export default {
-    components: {
-        BlogPostCollection,
-        Calendar,
-        User
-    },
-    mounted() {
-        posts.find(post => {
-            if (post.slug === this.$route.params.slug) {
-                this.post = post;
-                document.title = document.title.replace('View Post', post.title);
-            }
-        });
+const route = useRoute()
+const router = useRouter()
+const post = ref(null)
 
-        if (!this.post) {
-            this.$router.push({ name: 'not-found' }, '');
+onMounted(() => {
+    posts.find(p => {
+        if (p.slug === route.params.slug) {
+            post.value = p;
         }
-    },
-    data() {
-        return {
-            post: null
+    });
+
+    if (!post.value) {
+        router.push({ name: 'not-found' });
+    }
+})
+
+const metaDescription = computed(() => {
+    if (!post.value) return 'Read this blog post from S7';
+    const contentPreview = post.value.content
+        ? post.value.content.replace(/<[^>]*>/g, '').substring(0, 160)
+        : post.value.title;
+    return contentPreview.length > 160 ? contentPreview.substring(0, 157) + '...' : contentPreview;
+})
+
+const pageTitle = computed(() => post.value ? `${post.value.title} - Blog - S7` : 'Blog Post - S7')
+const pageUrl = computed(() => `https://s7.gg/blog/${route.params.slug}`)
+
+useHead(() => ({
+    title: pageTitle.value,
+    meta: [
+        {
+            name: 'description',
+            content: metaDescription.value
+        },
+        {
+            name: 'keywords',
+            content: post.value ? `S7, blog, ${post.value.title}, ${post.value.author || ''}` : 'S7, blog'
+        },
+        {
+            property: 'og:title',
+            content: pageTitle.value
+        },
+        {
+            property: 'og:description',
+            content: metaDescription.value
+        },
+        {
+            property: 'og:type',
+            content: 'article'
+        },
+        {
+            property: 'og:url',
+            content: pageUrl.value
+        },
+        {
+            property: 'og:image',
+            content: post.value?.hero ? `https://s7.gg${post.value.hero}` : 'https://s7.gg/logo.png'
+        },
+        {
+            property: 'article:published_time',
+            content: post.value?.datePosted || ''
+        },
+        {
+            property: 'article:author',
+            content: post.value?.author || 'S7'
+        },
+        {
+            name: 'twitter:card',
+            content: 'summary_large_image'
+        },
+        {
+            name: 'twitter:title',
+            content: pageTitle.value
+        },
+        {
+            name: 'twitter:description',
+            content: metaDescription.value
+        },
+        {
+            name: 'twitter:image',
+            content: post.value?.hero ? `https://s7.gg${post.value.hero}` : 'https://s7.gg/logo.png'
         }
-    },
-}
+    ],
+    link: [
+        {
+            rel: 'canonical',
+            href: pageUrl.value
+        }
+    ]
+}))
 </script>
