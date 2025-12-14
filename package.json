@@ -20,7 +20,7 @@
     "happy-dom": "^15.11.7",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
-    "vite": "^5.3.1",
+    "vite": "^7.2.7",
     "vite-ssg": "^28.2.2",
     "vue-router": "^4.6.4"
   },
