@@ -25,6 +25,7 @@
     "vue-router": "^4.6.4"
   },
   "overrides": {
-    "parse5": "^7.2.1"
+    "parse5": "^7.2.1",
+    "webidl-conversions": "^7.0.0"
   }
 }
