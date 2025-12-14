@@ -155,7 +155,7 @@
         "icon": "/todayos.png",
         "shortDesc": "Productivity App",
         "description": "The all-in-one productivity suite that adapts to your workflow. Schedule, track, organize, and achieve more.",
-        "web": "https://todayos.co/",
+        "web": null,
         "ios": null,
         "mac": null,
         "android": null,
