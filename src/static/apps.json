@@ -149,68 +149,56 @@
         ]
     },
     {
-        "id": "todayos",
-        "name": "TodayOS",
+        "id": "piccy",
+        "name": "Piccy",
         "enabled": true,
-        "icon": "/todayos.png",
-        "shortDesc": "Productivity App",
-        "description": "The all-in-one productivity suite that adapts to your workflow. Schedule, track, organize, and achieve more.",
-        "web": null,
+        "icon": "/piccy.png",
+        "shortDesc": "Photo Sharing",
+        "description": "Never chase guests for photos again. Capture every moment with Piccy. No apps, no logins, just pure simplicity.",
+        "web": "https://piccy.app",
         "ios": null,
         "mac": null,
         "android": null,
-        "comingSoon": true,
+        "comingSoon": false,
         "background": "hover:bg-blue-100",
-        "platforms": ["mac", "web"],
+        "platforms": ["web"],
         "screenshots": [],
         "features": [
             {
-                "icon": "calendar-days",
-                "title": "Smart Scheduling",
-                "desc": "Intuitive drag-and-drop calendar with time blocking to help you organize your day effectively.",
+                "icon": "Camera",
+                "title": "Instant Photo Sharing",
+                "desc": "Guests can instantly share photos by scanning a QR code, no app or login required.",
                 "background": "bg-blue-100"
             },
             {
-                "icon": "NotebookPen",
-                "title": "Reflective Journal",
-                "desc": "Daily journaling with guided prompts and mood tracking to help you grow and stay mindful.",
-                "background": "bg-purple-100"
-            },
-            {
-                "icon": "check-check",
-                "title": "Habit Tracking",
-                "desc": "Build lasting habits with visual progress tracking and intelligent reminders that adapt to your lifestyle.",
+                "icon": "Image",
+                "title": "High-Quality Storage",
+                "desc": "Store your photos in high quality without worrying about compression or loss of detail.",
                 "background": "bg-green-100"
             },
             {
-                "icon": "ListTodo",
-                "title": "Task Management",
-                "desc": "Organize your to-dos with priority levels, deadlines, and reminders on a per-project basis to keep you on track.",
-                "background": "bg-orange-100"
+                "icon": "MessageSquare",
+                "title": "Message Designer",
+                "desc": "Allow guests to leave guestbook messages in various different themes.",
+                "background": "bg-red-100"
             },
             {
-                "icon": "Kanban",
-                "title": "Visual Kanban",
-                "desc": "Drag and drop tasks across customizable boards to visualize your workflow and boost productivity.",
-                "background": "bg-teal-100"
-            },
-            {
-                "icon": "FileText",
-                "title": "Notes",
-                "desc": "Rich text editing with linking, tagging, and search. Your thoughts, organized and accessible.",
+                "icon": "Download",
+                "title": "Export all",
+                "desc": "Easily export the entire photo collection in their original high quality.",
                 "background": "bg-yellow-100"
             },
             {
-                "icon": "Hash",
-                "title": "Spaces",
-                "desc": "Create dedicated workspaces to organize related projects, tasks, notes, and schedules in one place.",
-                "background": "bg-pink-100"
+                "icon": "Lock",
+                "title": "Privacy Focused",
+                "desc": "Your photos are private and secure, with no tracking or data collection.",
+                "background": "bg-purple-100"
             },
             {
-                "icon": "Brain",
-                "title": "Focus Mode",
-                "desc": "Minimize distractions with a customizable focus mode that shows just the timer, focused tasks, and a still or animated background.",
-                "background": "bg-red-100"
+                "icon": "Images",
+                "title": "Gallery View",
+                "desc": "Display all your photos in a beautiful gallery layout during the event.",
+                "background": "bg-pink-100"
             }
         ]
     },
