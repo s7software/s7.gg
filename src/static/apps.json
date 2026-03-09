@@ -42,44 +42,44 @@
         ]
     },
     {
-        "id": "mymenu",
-        "name": "MyMenu",
+        "id": "clipcat",
+        "name": "ClipCat",
         "enabled": true,
-        "icon": "/mymenu.png",
-        "shortDesc": "Meal Planner",
-        "description": "MyMenu is a free meal planning app designed to help you organise your weekly meals and shopping with ease, saving you money and reducing on food waste.",
-        "web": null,
+        "icon": "/clipcat.png",
+        "shortDesc": "AI TikTok Slideshows",
+        "description": "Turn any topic into a post-ready TikTok slideshow in seconds. AI-generated hooks, facts, and visuals, all themed and export-ready.",
+        "web": "https://clipcat.app",
         "ios": null,
         "mac": null,
         "android": null,
-        "comingSoon": true,
-        "background": "hover:bg-yellow-100",
-        "platforms": ["ios"],
+        "comingSoon": false,
+        "background": "hover:bg-orange-100",
+        "platforms": ["web"],
         "screenshots": [],
         "features": [
             {
-                "icon": "Calendar",
-                "title": "Weekly Meal Planning",
-                "desc": "Plan your meals for the week ahead with our easy-to-use calendar interface.",
-                "background": "bg-yellow-100"
+                "icon": "Sparkles",
+                "title": "AI Slide Generation",
+                "desc": "Drop in a topic and get a full slideshow - hook, insights, and image suggestions - generated in seconds.",
+                "background": "bg-orange-100"
             },
             {
-                "icon": "ShoppingCart",
-                "title": "Automated Shopping Lists",
-                "desc": "Generate shopping lists based on your meal plans to make grocery shopping a breeze.",
-                "background": "bg-green-100"
-            },
-            {
-                "icon": "RefreshCcw",
-                "title": "Meal Suggestions",
-                "desc": "Get meal suggestions based on your dietary preferences and past meals.",
+                "icon": "Images",
+                "title": "Auto Image Matching",
+                "desc": "Every slide gets a high-quality Unsplash image picked to match your content automatically.",
                 "background": "bg-blue-100"
             },
             {
-                "icon": "Star",
-                "title": "Favourite Meals",
-                "desc": "Save your favourite meals for quick access and easy planning in the future.",
+                "icon": "Palette",
+                "title": "One-Click Themes",
+                "desc": "Choose from clean, luxury, or bold themes to style your slides without touching a single design tool.",
                 "background": "bg-purple-100"
+            },
+            {
+                "icon": "Download",
+                "title": "Export & Post",
+                "desc": "Export your slideshow as an image sequence, ready to upload directly to TikTok.",
+                "background": "bg-green-100"
             }
         ]
     },
