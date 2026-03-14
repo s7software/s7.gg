@@ -203,56 +203,44 @@
         ]
     },
     {
-        "id": "whirlwind",
-        "name": "Whirlwind",
-        "enabled": false,
-        "icon": "https://i.ibb.co/0jpGVhkk/New-Project-8.png",
-        "shortDesc": "TailwindCSS Prototyping",
-        "description": "Tailwind Play as a native desktop app, with offline support, project management, local saving, and more.",
-        "web": "",
-        "ios": null,
+        "id": "graft",
+        "name": "Graft",
+        "enabled": true,
+        "icon": "/graft.png",
+        "shortDesc": "Goal App With Deadlines",
+        "description": "Set a goal, set a deadline, hold yourself to it. Graft is a premium goal app for people who actually finish things - no badges, no fluff, just you and the thing you said you'd do.",
+        "web": null,
+        "ios": "https://apps.apple.com/us/app/graft-finish-what-you-start/id6760355811",
         "mac": null,
         "android": null,
-        "comingSoon": true,
-        "background": "hover:bg-red-100",
-        "platforms": ["mac"],
+        "comingSoon": false,
+        "background": "hover:bg-purple-100",
+        "platforms": ["ios"],
         "screenshots": [],
         "features": [
             {
-                "icon": "cpu",
-                "title": "Offline Support",
-                "desc": "Work on your TailwindCSS projects without an internet connection.",
-                "background": "bg-red-100"
-            },
-            {
-                "icon": "folder-open",
-                "title": "Project Management",
-                "desc": "Easily manage multiple TailwindCSS projects within the app.",
-                "background": "bg-yellow-100"
-            },
-            {
-                "icon": "save",
-                "title": "Local Saving",
-                "desc": "Save your projects locally on your device for quick access and security.",
-                "background": "bg-green-100"
-            },
-            {
-                "icon": "palette",
-                "title": "Color Picker",
-                "desc": "Quickly select tailwind colors from a built-in color picker tool.",
-                "background": "bg-blue-100"
-            },
-            {
-                "icon": "PaintBucket",
-                "title": "Gradient Generator",
-                "desc": "Generate and customize gradients for your TailwindCSS projects with ease.",
+                "icon": "Flag",
+                "title": "Goals With Deadlines",
+                "desc": "Every goal has a deadline and a countdown. No open-ended ambitions - just a target, a date, and a ticking clock.",
                 "background": "bg-purple-100"
             },
             {
-                "icon": "Code",
-                "title": "Monaco editor",
-                "desc": "VS Code editor with syntax highlighting, autocompletion, and error checking for a seamless coding experience.",
-                "background": "bg-pink-100"
+                "icon": "ListChecks",
+                "title": "Milestone Tracking",
+                "desc": "Break your goal into milestones and chip away at it daily. Every check-in counts, every milestone moves you forward.",
+                "background": "bg-blue-100"
+            },
+            {
+                "icon": "CalendarCheck",
+                "title": "Daily Check-ins",
+                "desc": "Show up every day and log your progress. Graft tracks your consistency so you can see exactly where you stood up and where you didn't.",
+                "background": "bg-red-100"
+            },
+            {
+                "icon": "Trophy",
+                "title": "Finish Line Moments",
+                "desc": "When you hit your goal, Graft marks the moment. A shareable summary of your journey - every check-in, every milestone, earned.",
+                "background": "bg-yellow-50"
             }
         ]
     }
