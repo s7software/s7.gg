@@ -52,7 +52,7 @@
         "ios": null,
         "mac": null,
         "android": null,
-        "comingSoon": false,
+        "comingSoon": true,
         "background": "hover:bg-orange-100",
         "platforms": ["web"],
         "screenshots": [],
@@ -199,6 +199,54 @@
                 "title": "Gallery View",
                 "desc": "Display all your photos in a beautiful gallery layout during the event.",
                 "background": "bg-pink-100"
+            }
+        ]
+    },
+    {
+        "id": "mymenu",
+        "name": "MyMenu",
+        "enabled": true,
+        "icon": "/mymenu.png",
+        "shortDesc": "Meal Planner",
+        "description": "MyMenu is a free meal planning app designed to help you organise your weekly meals and shopping with ease, saving you money and reducing on food waste.",
+        "web": null,
+        "ios": null,
+        "mac": null,
+        "android": null,
+        "comingSoon": false,
+        "background": "hover:bg-yellow-100",
+        "platforms": ["ios"],
+        "screenshots": [],
+        "features": [
+            {
+                "icon": "Zap",
+                "title": "Auto Generate Meal Plans",
+                "desc": "Automatically generate meal plans based on meals you've added to the app.",
+                "background": "bg-indigo-100"
+            },
+            {
+                "icon": "Calendar",
+                "title": "Weekly Meal Planning",
+                "desc": "Plan your meals for the week ahead with our easy-to-use calendar interface.",
+                "background": "bg-yellow-100"
+            },
+            {
+                "icon": "ShoppingCart",
+                "title": "Automated Shopping Lists",
+                "desc": "Generate shopping lists based on your meal plans to make grocery shopping a breeze.",
+                "background": "bg-green-100"
+            },
+            {
+                "icon": "RefreshCcw",
+                "title": "Meal Suggestions",
+                "desc": "Get meal suggestions based on your dietary preferences and past meals.",
+                "background": "bg-blue-100"
+            },
+            {
+                "icon": "Star",
+                "title": "Favourite Meals",
+                "desc": "Save your favourite meals for quick access and easy planning in the future.",
+                "background": "bg-purple-100"
             }
         ]
     },
