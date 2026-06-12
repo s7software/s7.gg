@@ -44,7 +44,7 @@
     {
         "id": "clipcat",
         "name": "ClipCat",
-        "enabled": true,
+        "enabled": false,
         "icon": "/clipcat.png",
         "shortDesc": "AI TikTok Slideshows",
         "description": "Turn any topic into a post-ready TikTok slideshow in seconds. AI-generated hooks, facts, and visuals, all themed and export-ready.",
@@ -80,6 +80,60 @@
                 "title": "Export & Post",
                 "desc": "Export your slideshow as an image sequence, ready to upload directly to TikTok.",
                 "background": "bg-green-100"
+            }
+        ]
+    },
+    {
+        "id": "piccy",
+        "name": "Piccy",
+        "enabled": true,
+        "icon": "/piccy.png",
+        "shortDesc": "Photo Sharing",
+        "description": "Never chase guests for photos again. Capture every moment with Piccy. No apps, no logins, just pure simplicity.",
+        "web": "https://piccy.app",
+        "ios": null,
+        "mac": null,
+        "android": null,
+        "comingSoon": false,
+        "background": "hover:bg-blue-100",
+        "platforms": ["web"],
+        "screenshots": [],
+        "features": [
+            {
+                "icon": "Camera",
+                "title": "Instant Photo Sharing",
+                "desc": "Guests can instantly share photos by scanning a QR code, no app or login required.",
+                "background": "bg-blue-100"
+            },
+            {
+                "icon": "Image",
+                "title": "High-Quality Storage",
+                "desc": "Store your photos in high quality without worrying about compression or loss of detail.",
+                "background": "bg-green-100"
+            },
+            {
+                "icon": "MessageSquare",
+                "title": "Message Designer",
+                "desc": "Allow guests to leave guestbook messages in various different themes.",
+                "background": "bg-red-100"
+            },
+            {
+                "icon": "Download",
+                "title": "Export all",
+                "desc": "Easily export the entire photo collection in their original high quality.",
+                "background": "bg-yellow-100"
+            },
+            {
+                "icon": "Lock",
+                "title": "Privacy Focused",
+                "desc": "Your photos are private and secure, with no tracking or data collection.",
+                "background": "bg-purple-100"
+            },
+            {
+                "icon": "Images",
+                "title": "Gallery View",
+                "desc": "Display all your photos in a beautiful gallery layout during the event.",
+                "background": "bg-pink-100"
             }
         ]
     },
@@ -149,60 +203,6 @@
         ]
     },
     {
-        "id": "piccy",
-        "name": "Piccy",
-        "enabled": true,
-        "icon": "/piccy.png",
-        "shortDesc": "Photo Sharing",
-        "description": "Never chase guests for photos again. Capture every moment with Piccy. No apps, no logins, just pure simplicity.",
-        "web": "https://piccy.app",
-        "ios": null,
-        "mac": null,
-        "android": null,
-        "comingSoon": false,
-        "background": "hover:bg-blue-100",
-        "platforms": ["web"],
-        "screenshots": [],
-        "features": [
-            {
-                "icon": "Camera",
-                "title": "Instant Photo Sharing",
-                "desc": "Guests can instantly share photos by scanning a QR code, no app or login required.",
-                "background": "bg-blue-100"
-            },
-            {
-                "icon": "Image",
-                "title": "High-Quality Storage",
-                "desc": "Store your photos in high quality without worrying about compression or loss of detail.",
-                "background": "bg-green-100"
-            },
-            {
-                "icon": "MessageSquare",
-                "title": "Message Designer",
-                "desc": "Allow guests to leave guestbook messages in various different themes.",
-                "background": "bg-red-100"
-            },
-            {
-                "icon": "Download",
-                "title": "Export all",
-                "desc": "Easily export the entire photo collection in their original high quality.",
-                "background": "bg-yellow-100"
-            },
-            {
-                "icon": "Lock",
-                "title": "Privacy Focused",
-                "desc": "Your photos are private and secure, with no tracking or data collection.",
-                "background": "bg-purple-100"
-            },
-            {
-                "icon": "Images",
-                "title": "Gallery View",
-                "desc": "Display all your photos in a beautiful gallery layout during the event.",
-                "background": "bg-pink-100"
-            }
-        ]
-    },
-    {
         "id": "mymenu",
         "name": "MyMenu",
         "enabled": true,
@@ -210,7 +210,7 @@
         "shortDesc": "Meal Planner",
         "description": "MyMenu is a free meal planning app designed to help you organise your weekly meals and shopping with ease, saving you money and reducing on food waste.",
         "web": null,
-        "ios": null,
+        "ios": "https://apps.apple.com/us/app/mymenu-meal-planner/id6751985228",
         "mac": null,
         "android": null,
         "comingSoon": false,
@@ -247,48 +247,6 @@
                 "title": "Favourite Meals",
                 "desc": "Save your favourite meals for quick access and easy planning in the future.",
                 "background": "bg-purple-100"
-            }
-        ]
-    },
-    {
-        "id": "graft",
-        "name": "Graft",
-        "enabled": true,
-        "icon": "/graft.png",
-        "shortDesc": "Goal App With Deadlines",
-        "description": "Set a goal, set a deadline, hold yourself to it. Graft is a premium goal app for people who actually finish things - no badges, no fluff, just you and the thing you said you'd do.",
-        "web": null,
-        "ios": "https://apps.apple.com/us/app/graft-finish-what-you-start/id6760355811",
-        "mac": null,
-        "android": null,
-        "comingSoon": false,
-        "background": "hover:bg-purple-100",
-        "platforms": ["ios"],
-        "screenshots": [],
-        "features": [
-            {
-                "icon": "Flag",
-                "title": "Goals With Deadlines",
-                "desc": "Every goal has a deadline and a countdown. No open-ended ambitions - just a target, a date, and a ticking clock.",
-                "background": "bg-purple-100"
-            },
-            {
-                "icon": "ListChecks",
-                "title": "Milestone Tracking",
-                "desc": "Break your goal into milestones and chip away at it daily. Every check-in counts, every milestone moves you forward.",
-                "background": "bg-blue-100"
-            },
-            {
-                "icon": "CalendarCheck",
-                "title": "Daily Check-ins",
-                "desc": "Show up every day and log your progress. Graft tracks your consistency so you can see exactly where you stood up and where you didn't.",
-                "background": "bg-red-100"
-            },
-            {
-                "icon": "Trophy",
-                "title": "Finish Line Moments",
-                "desc": "When you hit your goal, Graft marks the moment. A shareable summary of your journey - every check-in, every milestone, earned.",
-                "background": "bg-yellow-50"
             }
         ]
     }

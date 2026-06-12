@@ -28,16 +28,6 @@ Plan your weekly meals, generate shopping lists automatically, and reduce food w
 
 **Coming soon** to iOS and Mac.
 
-#### TodayOS - Productivity Suite
-An all-in-one productivity app that adapts to your workflow. Schedule, track, organize, and achieve more with **smart scheduling**, a **reflective journal**, **habit tracking**, **task management**, **visual kanban boards**, **notes**, and customizable **spaces** to organize projects.
-
-**Coming soon** to Mac and Web. You can check out the early version at [todayos.co](https://todayos.co/).
-
-#### Whirlwind - TailwindCSS Prototyping
-Tailwind Play as a native desktop app, with **offline support**, **project management**, and **local saving**. Perfect for rapid prototyping without needing an internet connection.
-
-**Coming soon** to Mac.
-
 ### What's Next
 
 We're continuing to build out these apps and improve the site as we go. If you want to stay updated on new releases, follow along here on the blog or reach out via [email](mailto:josh@s7.gg) or [Twitter](https://x.com/joshbarkeruk).
