@@ -11,7 +11,7 @@
         "mac": null,
         "android": null,
         "comingSoon": false,
-        "background": "hover:bg-green-100",
+        "background": "bg-green-100",
         "platforms": ["ios"],
         "screenshots": [],
         "features": [
@@ -53,7 +53,7 @@
         "mac": null,
         "android": null,
         "comingSoon": true,
-        "background": "hover:bg-orange-100",
+        "background": "bg-orange-100",
         "platforms": ["web"],
         "screenshots": [],
         "features": [
@@ -95,7 +95,7 @@
         "mac": null,
         "android": null,
         "comingSoon": false,
-        "background": "hover:bg-blue-100",
+        "background": "bg-blue-100",
         "platforms": ["web"],
         "screenshots": [],
         "features": [
@@ -154,7 +154,7 @@
         "price": "$7.99",
         "android": null,
         "comingSoon": false,
-        "background": "hover:bg-red-100",
+        "background": "bg-red-100",
         "platforms": ["mac"],
         "screenshots": [
             "/pulse/1.png",
@@ -214,7 +214,7 @@
         "mac": null,
         "android": null,
         "comingSoon": false,
-        "background": "hover:bg-yellow-100",
+        "background": "bg-yellow-100",
         "platforms": ["ios"],
         "screenshots": [],
         "features": [
