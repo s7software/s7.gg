@@ -1,6 +1,6 @@
 <template>
     <nav class="flex items-center gap-2">
-        <RouterLink :to="{name: 'home'}" class="bg-white border-2 border-black rounded-lg border-b-4 h-12 flex items-center justify-between hover:bg-orange-100 transition-colors duration-300">
+        <RouterLink :to="{name: 'home'}" class="bg-orange-100 border-2 border-black rounded-lg border-b-4 h-12 flex items-center justify-between hover:bg-blue-100 transition-colors duration-300">
             <img src="/logo.png" class="h-8 px-1.5 invert" />
         </RouterLink>
         <div class="bg-white border-2 border-black rounded-lg border-b-4 h-12 flex items-center justify-center md:justify-end px-3 flex-1">
